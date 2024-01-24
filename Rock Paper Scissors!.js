@@ -11,5 +11,19 @@ Examples(Input1, Input2 --> Output):
 
 */
 
-
+//Solutions
+//Mine
 const rps = (p1, p2) => p1 === p2 ? "Draw!" : (p1 === "rock" && p2 === "scissors") || (p1 === "paper" && p2 === "rock") || (p1 === "scissors" && p2 === "paper")? "Player 1 won!" : "Player 2 won!";
+
+//Top
+
+const rps = (p1, p2) => {
+  if (p1 === p2) return "Draw!";
+  var rules = {rock: "scissors", paper: "rock", scissors: "paper"};
+  if (p2 === rules[p1]) {
+    return "Player 1 won!";
+  }
+  else {
+    return "Player 2 won!";
+  }
+};
